@@ -1,0 +1,16 @@
+Token	HSL	Hex (approx.)	Usage
+Primary (Deep Teal)	hsl(182, 84%, 25%)	#0A7373	Trust, health, buttons
+Secondary (Warm Amber)	hsl(36, 95%, 55%)	#E8A317	Energy, CTAs, accents
+Background	hsl(40, 30%, 97%)	#F8F6F2	Page background
+Foreground	hsl(210, 25%, 12%)	#171E27	Body text
+Muted	hsl(210, 20%, 93%)	#EBEEF2	Subtle backgrounds
+Muted Foreground	hsl(210, 15%, 45%)	#636D7D	Secondary text
+Health Green	hsl(142, 71%, 45%)	#21B15E	Recovery / good status
+Health Yellow	hsl(45, 93%, 55%)	#F0C418	Caution / moderate
+Health Red	hsl(0, 72%, 51%)	#E02424	Critical / urgent
+Health Navy	hsl(210, 40%, 14%)	#161F2E	Footer, dark accents
+Border	hsl(210, 15%, 88%)	#DCDFE4	Borders, dividers
+Gradients:
+
+Hero gradient: 135deg from #0A7373 → hsl(182, 65%, 35%)
+Amber gradient: 135deg from #E8A317 → hsl(25, 95%, 60%)
