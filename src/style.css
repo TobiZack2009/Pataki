@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+  --color-md-primary: #6750A4;
+  --color-md-on-primary: #FFFFFF;
+  --color-md-secondary-container: #E8DEF8;
+  --color-md-on-secondary-container: #1D192B;
+  --color-md-tertiary: #7D5260;
+  --color-md-on-tertiary: #FFFFFF;
+  --color-md-surface: #FFFBFE;
+  --color-md-on-surface: #1C1B1F;
+  --color-md-surface-container: #F3EDF7;
+  --color-md-surface-container-low: #E7E0EC;
+  --color-md-on-surface-variant: #49454F;
+  --color-md-outline: #79747E;
+
+  --radius-md-xs: 8px;
+  --radius-md-s: 12px;
+  --radius-md-m: 16px;
+  --radius-md-l: 24px;
+  --radius-md-xl: 28px;
+  --radius-md-2xl: 32px;
+  --radius-md-3xl: 48px;
+
+  --ease-md-standard: cubic-bezier(0.2, 0, 0, 1);
+}
+
+@layer base {
+  body {
+    @apply bg-md-surface text-md-on-surface font-roboto antialiased;
+  }
+}
+
+@layer components {
+  /* Material You 3 State Layer System */
+  .state-layer-hover {
+    @apply relative overflow-hidden;
+  }
+
+  .state-layer-hover::after {
+    content: "";
+    @apply absolute inset-0 bg-current opacity-0 transition-opacity duration-200;
+  }
+
+  .state-layer-hover:hover::after {
+    @apply opacity-[0.08];
+  }
+
+  .state-layer-active:active::after {
+    @apply opacity-[0.12];
+  }
+
+  /* MD3 Filled Input Style */
+  .md-input-filled {
+    @apply h-14 bg-md-surface-container-low px-4 pt-4 pb-1 rounded-t-lg border-b-2 border-md-outline 
+           focus:border-md-primary focus:outline-none transition-all duration-200 placeholder-transparent w-full;
+  }
+
+  .md-input-filled:focus + label,
+  .md-input-filled:not(:placeholder-shown) + label {
+    @apply -translate-y-2 scale-75 text-md-primary;
+  }
+
+  .md-input-label {
+    @apply absolute left-4 top-4 text-md-on-surface-variant transition-all duration-200 pointer-events-none origin-left;
+  }
+}
+
+/* Custom Utilities for MD3 animations and effects */
+@utility md-shadow-1 {
+  box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+@utility md-shadow-2 {
+  box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+@utility md-shadow-3 {
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3), 0px 4px 8px 3px rgba(0, 0, 0, 0.15);
+}
