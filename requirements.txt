@@ -1,0 +1,78 @@
+Product Requirements Document (PRD)
+Product Name: Pataki
+1. Overview
+Pataki is an AI-powered health navigation and microinsurance platform designed to address the healthcare access and insurance discovery gap in Nigeria. It combines a multi-modal triage system with a seamless, voice-first insurance experience to guide users from symptom recognition to care access and payment—especially for underserved, low-literacy populations.
+2. Problem Statement
+•	Nigerians often delay seeking care due to misinformation, low digital literacy, and lack of insurance.
+•	Insurance is seen as a “grudge purchase” and is rarely used until emergencies arise.
+•	Pharmacies are often the first point of care, but users pay out-of-pocket until conditions worsen.
+•	Insurers face high loss ratios due to late-stage claims and lack of preventive data.
+3. Goals
+•	Provide a simple, accessible AI triage system to guide users to the right care path.
+•	Enable early detection and preventive action through daily health check-ins.
+•	Offer a microinsurance model that is affordable, trusted, and seamlessly integrated.
+•	Reduce insurer costs through AI vetting, behavioral nudges, and early intervention.
+•	Build a health wallet that rewards users for proactive behavior and engagement.
+4. Target Users
+•	Low- and middle-income Nigerians, especially those in rural or semi-urban areas.
+•	Users with low digital or medical literacy.
+•	Partner HMOs and pharmacies seeking to reduce costs and expand reach.
+5. Core Features (MVP Scope)
+A. Multi-Modal Input
+•	Voice Input: Users can speak in local dialects (starting with Pidgin or Yoruba).
+•	Text Input: Simple chatbot interface for typed symptoms or questions.
+•	OCR Input: Scan prescriptions or lab results using Tesseract.js or similar.
+B. AI Triage Engine
+•	Categorizes input into:
+o	Clinical Path: Physical symptoms.
+o	Psychological Path: Mental health concerns.
+o	Information Path: Preventive health education.
+•	Uses keyword-based logic to assign a risk score (Low, Medium, High).
+C. Risk Intelligence
+•	Analyzes user input over time to detect patterns.
+•	Suggests possible causes and next steps.
+•	Displays two nearby clinics or hospitals based on condition severity.
+•	Triggers alerts for human-in-the-loop doctor review if risk is high.
+D. Insurance Flow: “Pool & Protect”
+•	Provider Selection: User chooses from a list of HMOs.
+•	Subscription: Weekly micro-payments (₦500+) via Airtime, Moniepoint, or Opay.
+•	AI Vetting: “Talk to Pataki” confirms if care is needed.
+•	Doctor Approval: Human doctor verifies AI-approved cases.
+•	Token Generation:
+o	6-digit Pataki Care Code.
+o	QR Code for pharmacy scanning.
+o	Map snippet showing nearest partner pharmacy.
+o	Countdown timer for token validity.
+•	Settlement: Pharmacy enters code, dispenses care, and is reimbursed from the pooled fund.
+E. Health Wallet
+•	Tracks weekly contributions and earned Pataki Credits.
+•	Credits can be redeemed for consultations, medications, or emergency care.
+•	Encourages consistent engagement and builds user trust.
+6. User Flow (MVP Demo)
+1.	User opens Pataki and selects input mode (voice, text, scan).
+2.	AI triages the input and assigns a risk level.
+3.	If risk is high, AI suggests causes and shows 2 nearby clinics.
+4.	If user is insured, AI initiates vetting → doctor approves → token is generated.
+5.	User visits pharmacy, presents QR/code → receives care.
+6.	Pataki settles payment from pooled fund.
+7.	User earns credits and sees them in their Health Wallet.
+7. Tech Stack (Suggested)
+•	Frontend: React or React Native
+•	Backend: Node.js or Python Flask
+•	Voice Input: Google Speech-to-Text or Azure Speech Services
+•	OCR: Tesseract.js or Azure Computer Vision
+•	Map Integration: Google Maps API or OpenStreetMap
+•	Payments: Mock Airtime/Opay integration
+•	Database: Firebase or SQLite
+8. Success Metrics
+•	Time to complete triage and insurance flow (target: < 3 minutes).
+•	% of users completing daily check-ins.
+•	% of users subscribing to insurance plans.
+•	Number of successful pharmacy redemptions using Pataki Codes.
+•	Reduction in unnecessary pharmacy visits (via AI vetting).
+9. Future Enhancements
+•	Expand dialect support and offline voice mode.
+•	Add gamified health challenges to boost engagement.
+•	Integrate with national health databases for richer risk modeling.
+•	Launch SMS-based version for feature phone users.
+•	Build full insurer dashboards with real-time risk heatmaps.
